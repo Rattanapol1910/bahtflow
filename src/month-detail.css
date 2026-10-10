@@ -1,0 +1,34 @@
+/* แถวเดือนที่กดได้ในหน้า "สรุปผล" */
+.month-history-row.month-history-row--clickable {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.18s ease;
+}
+.month-history-row.month-history-row--clickable:last-child { border-bottom: 0; }
+.month-history-row.month-history-row--clickable:hover,
+.month-history-row.month-history-row--clickable:focus-visible { background: var(--surface-soft); outline: none; }
+.month-history-chevron { flex: 0 0 auto; color: var(--muted); }
+
+/* หน้าต่างรายละเอียดรายเดือน */
+.md-balance { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; margin-bottom: 14px; border-radius: 13px; background: var(--surface-soft); font-size: 12px; color: var(--muted); }
+.md-balance strong { font: 600 18px 'Kanit', sans-serif; }
+.md-balance .positive { color: var(--income); }
+.md-balance .negative { color: var(--expense); }
+.md-block { padding: 14px 0 6px; border-top: 1px solid var(--line); }
+.md-block-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.md-block-head span { font-size: 13px; font-weight: 600; }
+.md-block-head strong { font: 600 20px 'Kanit', sans-serif; }
+.md-block--income .md-block-head strong { color: var(--income); }
+.md-block--expense .md-block-head strong { color: var(--expense); }
+.md-donut { display: flex; align-items: center; gap: 24px; padding: 14px 0 8px; }
+@media (max-width: 510px) {
+  .md-donut { flex-direction: column; align-items: stretch; }
+  .md-donut .category-donut { align-self: center; }
+}

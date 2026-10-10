@@ -1,0 +1,27 @@
+{
+  "name": "bahtflow",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "packageManager": "pnpm@10.24.0",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "server": "node server/index.js",
+    "build": "tsc -p tsconfig.app.json --noEmit && vite build",
+    "check": "tsc -p tsconfig.app.json --noEmit"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "@vladmandic/face-api": "^1.7.15",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tesseract.js": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "typescript": "latest"
+  }
+}
